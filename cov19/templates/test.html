@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../static/js/echarts.min.js"></script>  //先下载echart
+	</head>
+	<body>
+		<div id="main" style="width:600px;height: 50rem;"></div>   //有固定宽高的容器
+		<script>
+			var ectest = echarts.init(document.getElementById("main"))   //要初始化
+			
+			
+			var option = {
+    xAxis: {
+        type: 'category',
+        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [820, 932, 901, 934, 1290, 1330, 1320],
+        type: 'line'
+    }]
+};
+
+        ectest.setOption(option);   //显示对应图像
+		</script>
+	</body>
+</html>
